@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 int main() {
     double a, b, c;
@@ -18,32 +19,32 @@ int main() {
         // Clasificacion por lados
         if (a == b && b == c) {
             std::cout << "Tipo: Equilatero\n";
-        } 
+        }
         else if (a == b  a == c 
  b == c) {
             std::cout << "Tipo: Isosceles\n";
-        } 
+        }
         else {
             std::cout << "Tipo: Escaleno\n";
         }
 
-        // Clasificacion por angulos
-        double a2 = a * a;
-        double b2 = b * b;
-        double c2 = c * c;
+        // Clasificacion por angulos usando pow()
+        double a2 = pow(a, 2);
+        double b2 = pow(b, 2);
+        double c2 = pow(c, 2);
 
         if (a2 + b2 == c2  a2 + c2 == b2 
  b2 + c2 == a2) {
             std::cout << "Es Rectangulo\n";
-        } 
+        }
         else if (a2 + b2 > c2 && a2 + c2 > b2 && b2 + c2 > a2) {
             std::cout << "Es Acutangulo\n";
-        } 
+        }
         else {
             std::cout << "Es Obtusangulo\n";
         }
 
-    } 
+    }
     else {
         std::cout << "No es un triangulo valido\n";
     }
